@@ -81,12 +81,12 @@ const handleSubmit = async (e) => {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
     // specific message div 
-    const messageDiv = document.getElementById(uniqueId)
+    const messageDiv = document.getElementById(uniqueId);
 
-    // messageDiv.innerHTML = "..."
-    loader(messageDiv)
+    loader(messageDiv);
 
-    const response = await fetch('https://codex-im0y.onrender.com/', {
+    // FETCH DATA FROM SERVER -> THE BOT'S RESPONSE
+    const response = await fetch('https://localhost:5000/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
