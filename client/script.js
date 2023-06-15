@@ -81,12 +81,12 @@ const handleSubmit = async (e) => {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
     // specific message div 
-    const messageDiv = document.getElementById(uniqueId);
+    const messageDiv = document.getElementById(uniqueId)
 
-    loader(messageDiv);
+    // messageDiv.innerHTML = "..."
+    loader(messageDiv)
 
-    // FETCH DATA FROM SERVER -> THE BOT'S RESPONSE
-    const response = await fetch('https://codagen.onrender.com', {
+    const response = await fetch('http://localhost:5000/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
