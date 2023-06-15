@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
     loader(messageDiv);
 
     // FETCH DATA FROM SERVER -> THE BOT'S RESPONSE
-    const response = await fetch('http://localhost:5000/', {
+    const response = await fetch('https://codagen.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
